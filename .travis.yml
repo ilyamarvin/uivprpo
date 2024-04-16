@@ -8,6 +8,7 @@ install: true
 
 addons:
   sonarcloud:
+    organization: "ilyamarvin"
     token:
       secure: ${SONAR_TOKEN}
 
