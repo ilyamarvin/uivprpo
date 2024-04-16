@@ -4,9 +4,8 @@ install: true
 addons:
   sonarcloud:
     organization: "ilyamarvin"
-    projectKey: "ilyamarvin_uivprpo"
     token:
-      secure: "19803b4b2c3763e8d5ac6a95ceccab30df313363"
+      secure: ${SONAR_TOKEN}
 
 script:
   - mvn clean verify sonar:sonar -Pcoverage -Dsonar.projectKey=ilyamarvin_uivprpo
