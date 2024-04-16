@@ -13,5 +13,4 @@ addons:
       secure: ${SONAR_TOKEN}
 
 script:
-#  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
-  - mvn clean verify sonar:sonar -Pcoverage
+  - mvn clean verify sonar:sonar -Pcoverage -Dsonar.projectKey=ilyamarvin_uivprpo
