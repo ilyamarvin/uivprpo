@@ -11,7 +11,6 @@ addons:
       secure: ${SONAR_TOKEN}
 
 script:
-  - mvn clean verify
   - mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=ilyamarvin_uivprpo
 
 cache:
