@@ -2,7 +2,7 @@ language: java
 sudo: required
 
 jdk:
-  - openjdk21
+  - openjdk17
 
 addons:
   sonarcloud:
