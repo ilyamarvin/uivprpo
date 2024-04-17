@@ -3,20 +3,19 @@ package org.example;
 public class Calculator {
     public double calculate(double firstOperand, double secondOperand, char operator) {
         switch (operator) {
-            case '+': {
+            case '+' -> {
                 return add(firstOperand, secondOperand);
             }
-            case '-': {
+            case '-' -> {
                 return subtract(firstOperand, secondOperand);
             }
-            case '*': {
+            case '*' -> {
                 return multiply(firstOperand, secondOperand);
             }
-            case '/': {
+            case '/' -> {
                 return divide(firstOperand, secondOperand);
             }
-            default:
-                throw new IllegalArgumentException("Unsupported operation :" + operator);
+            default -> throw new IllegalArgumentException("Unsupported operation :" + operator);
         }
     }
 
