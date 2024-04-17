@@ -12,7 +12,7 @@ addons:
 
 script:
   - mvn clean verify
-  - mvn sonar:sonar -Pcoverage
+  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=ilyamarvin_uivprpo
 
 cache:
   directories:
