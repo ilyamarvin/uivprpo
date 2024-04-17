@@ -12,7 +12,7 @@ addons:
       secure: ${SONAR_TOKEN}
 
 script:
-  - mvn clean verify sonar:sonar -Pcoverage # -Dsonar.projectKey=ilyamarvin_uivprpo
+  - mvn clean verify sonar:sonar -Pcoverage
 
 cache:
   directories:
