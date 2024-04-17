@@ -12,6 +12,8 @@ addons:
 
 script:
   - mvn clean verify
+  - mvn sonar:sonar -Pcoverage
+
 cache:
   directories:
     - '$HOME/.m2/repository'
