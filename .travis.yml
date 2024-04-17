@@ -1,9 +1,8 @@
 language: java
+sudo: required
 
 jdk:
   - openjdk21
-
-sudo: false
 
 addons:
   sonarcloud:
@@ -11,8 +10,14 @@ addons:
     token:
       secure: ${SONAR_TOKEN}
 
+before_script:
+  - sleep 3
+  - java --version
+
 script:
-  - mvn clean verify sonar:sonar -Pcoverage
+  - mvn clean verify
+  - mvn jacoco:report
+  - sonar-scanner -Dsonar.login=${SONAR_TOKEN} -Dsonar.verbose=true -X
 
 cache:
   directories:
