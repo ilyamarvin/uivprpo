@@ -10,14 +10,9 @@ addons:
     token:
       secure: ${SONAR_TOKEN}
 
-before_script:
-  - sleep 3
-  - java --version
-
 script:
   - mvn clean verify
-  - mvn jacoco:report
-  - sonar-scanner -Dsonar.login=${SONAR_TOKEN} -Dsonar.verbose=true -X
+  - mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=ilyamarvin_uivprpo
 
 cache:
   directories:
