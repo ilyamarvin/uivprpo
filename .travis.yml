@@ -8,10 +8,10 @@ addons:
   sonarcloud:
     organization: "ilyamarvin"
     token:
-      secure: ${{secrets.SONAR_TOKEN}}
+      secure: ${SONAR_TOKEN}
 
 script:
-  - mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=ilyamarvin_uivprpo -Dsonar.organization=ilyamarvin
+  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=ilyamarvin_uivprpo
 
 cache:
   directories:
