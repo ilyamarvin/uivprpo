@@ -11,11 +11,7 @@ addons:
       secure: ${SONAR_TOKEN}
 
 script:
-  - mvn clean verify sonar:sonar \
-    -Dsonar.token=SONAR_TOKEN \
-    -Dsonar.host.url=https://sonarcloud.io \
-    -Dsonar.organization=ilyamarvin_uivprpo \
-    -Dsonar.projectKey=ilyamarvin
+  - mvn clean verify
 cache:
   directories:
     - '$HOME/.m2/repository'
