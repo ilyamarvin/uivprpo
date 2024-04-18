@@ -1,5 +1,8 @@
 language: java
 
+jdk:
+  - openjdk17
+
 addons:
   sonarcloud:
     organization: "ilyamarvin"
